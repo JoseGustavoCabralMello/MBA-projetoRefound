@@ -6,7 +6,7 @@ const category = document.getElementById("category")
 
 // Seleciona os elementos da lista
 const expenseList = document.querySelector("ul")
-const expenseQuantity = document.querySelector("aside header p span")
+const expensesQuantity = document.querySelector("aside header p span")
 
 // Captura o evento de input para formatar o valor
 amount.oninput = () => {
@@ -109,9 +109,9 @@ function updateTotals () {
     const items = expenseList.children
 
     // Atualiza a quantidade de itens na lista.
-    expenseQuantity.textContent = `${itmes.length} ${itmes.length > 1 ? "despesas" : "despesa"}`
+    expensesQuantity.textContent = `${items.length} ${items.length > 1 ? "despesas" : "despesa"}`
   } catch (error) {
     console.log(error)
-    alert("Não foi possível atualizaar os totais.")
+    alert("Não foi possível atualizar os totais.")
   }
 }
